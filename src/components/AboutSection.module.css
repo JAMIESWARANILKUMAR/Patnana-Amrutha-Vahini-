@@ -96,6 +96,33 @@
   animation: ringFloat 6s ease-in-out infinite;
 }
 
+/* Animated gradient border overlay */
+.imageMask::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(89,229,255,0.18), rgba(183,107,240,0.14));
+  box-shadow: 0 8px 30px rgba(89,229,255,0.04), inset 0 1px 0 rgba(255,255,255,0.02);
+  mix-blend-mode: screen;
+  transform: translateZ(80px);
+  transition: transform 350ms ease, opacity 350ms ease;
+  background-size: 200% 100%;
+  animation: borderShift 6s linear infinite;
+}
+
+.imageMask:hover::before {
+  transform: translateZ(90px) scale(1.02) translateY(-6px);
+  opacity: 1;
+}
+
+@keyframes borderShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 @keyframes ringFloat {
   0% { transform: translateY(0) rotate(0deg); }
   50% { transform: translateY(-8px) rotate(12deg); }
