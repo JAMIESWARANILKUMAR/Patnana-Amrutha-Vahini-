@@ -3,6 +3,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import CustomCursor from "@/components/CustomCursor";
 import ScrollEffects from "@/components/ScrollEffects";
+import FloatingIcons from "@/components/FloatingIcons";
 
 export const metadata: Metadata = {
   title: "Patnana Amrutavahini | Portfolio",
@@ -38,6 +39,7 @@ export default function RootLayout({
       <body>
         <CustomCursor />
         <ScrollEffects />
+        <FloatingIcons />
         <Navigation />
         {children}
       </body>
