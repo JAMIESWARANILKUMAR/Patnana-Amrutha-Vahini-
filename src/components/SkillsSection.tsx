@@ -18,14 +18,10 @@ const skillsData = [
   },
   {
     category: "Data & Tools",
-    skills: ["MongoDB", "Computer Vision (Python)", "FastAPI"],
+    skills: ["Computer Vision (Python)", "FastAPI"],
     badges: ["Modeling", "APIs", "Deployment"],
   },
-  {
-    category: "Operating Systems",
-    skills: ["Windows"],
-    badges: ["Desktop Dev"],
-  },
+  
 ];
 
 const HolographicCard = ({ children }: { children: ReactNode }) => {
@@ -71,7 +67,7 @@ const HolographicCard = ({ children }: { children: ReactNode }) => {
 };
 
 export default function SkillsSection() {
-  const marqueeText = "AI · ML · Web Development · Computer Vision · FastAPI · MongoDB · ";
+  const marqueeText = "AI · ML · Web Development · Computer Vision · FastAPI · ";
 
   return (
     <section className={styles.skills} id="skills">
