@@ -80,6 +80,26 @@
   pointer-events: none;
 }
 
+/* Halo dot near corner */
+.halo {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.95), rgba(89,229,255,0.9) 25%, rgba(89,229,255,0.12) 40%, transparent 60%);
+  box-shadow: 0 6px 20px rgba(89,229,255,0.12), 0 0 6px rgba(183,107,240,0.06) inset;
+  pointer-events: none;
+  z-index: 30;
+}
+
+.imageInner { transition: transform 420ms cubic-bezier(.2,.9,.2,1), box-shadow 420ms ease; }
+.imageMask:hover .imageInner { transform: translateZ(18px) scale(1.006); box-shadow: 0 30px 60px rgba(0,0,0,0.6) }
+
+/* Badge hover glow */
+.floatingBadge:hover { box-shadow: 0 30px 80px rgba(89,229,255,0.08), 0 8px 30px rgba(0,0,0,0.6) }
+
 /* Decorative ring */
 .imageMask::after {
   content: "";

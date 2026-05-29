@@ -27,12 +27,13 @@ const textVariants = {
 };
 
 const badgeVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { 
-    opacity: 1, 
+  hidden: { opacity: 0, scale: 0.85, y: 10 },
+  visible: (i = 0) => ({
+    opacity: 1,
     scale: 1,
-    transition: { type: "spring" as const, stiffness: 120, damping: 15 }
-  }
+    y: 0,
+    transition: { delay: 0.16 * i, type: "spring" as const, stiffness: 130, damping: 16 }
+  })
 };
 
 export default function AboutSection() {
@@ -95,15 +96,19 @@ export default function AboutSection() {
               </motion.div>
 
               <div className={styles.imageOverlay} />
+              <div className={styles.imageOverlay} />
 
-              {/* Floating premium badges */}
-              <motion.div className={styles.badgeContainer} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-                <motion.div className={styles.floatingBadge} variants={badgeVariants} whileHover={{ scale: 1.04 }}>
+              {/* pulsing halo */}
+              <motion.div className={styles.halo} aria-hidden="true" initial={{ opacity: 0.6, scale: 0.96 }} animate={{ opacity: [0.6, 0.14, 0.6], scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, duration: 3.6, ease: "easeInOut" }} />
+
+              {/* Floating premium badges — staggered */}
+              <motion.div className={styles.badgeContainer} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+                <motion.div className={styles.floatingBadge} custom={0} variants={badgeVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} whileHover={{ scale: 1.06 }}>
                   <div className={styles.badgeIcon}><i className="fa-solid fa-robot"></i></div>
                   <div className={styles.badgeText}><strong>AI · ML</strong><span>Modeling & CV</span></div>
                 </motion.div>
 
-                <motion.div className={`${styles.floatingBadge} ${styles.badgeSecondary}`} variants={badgeVariants} whileHover={{ scale: 1.04 }}>
+                <motion.div className={`${styles.floatingBadge} ${styles.badgeSecondary}`} custom={1} variants={badgeVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} whileHover={{ scale: 1.06 }}>
                   <div className={styles.badgeIcon}><i className="fa-solid fa-atom"></i></div>
                   <div className={styles.badgeText}><strong>Open to Work</strong><span>Internships & Projects</span></div>
                 </motion.div>
