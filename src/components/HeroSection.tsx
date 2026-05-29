@@ -2,7 +2,6 @@
 
 import { useRef, useEffect, useState } from "react";
 import styles from "./HeroSection.module.css";
-import LiveClock from "./LiveClock";
 import { motion, useScroll, useTransform, useMotionValue, useSpring, AnimatePresence } from "framer-motion";
 
 // Each letter bounces on hover; CSS handles the chrome shimmer
@@ -126,7 +125,7 @@ export default function HeroSection() {
       <div className={styles.gridOverlay} />
 
       {/* Live IST clock */}
-      <LiveClock />
+      
 
       <motion.div 
         className={styles.content} 
