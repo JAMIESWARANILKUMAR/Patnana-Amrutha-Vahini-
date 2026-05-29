@@ -1,0 +1,46 @@
+.clock {
+  position: absolute;
+  top: 28px;
+  right: 48px;
+  min-width: 180px;
+  padding: 0.6rem 1rem;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(3,6,15,0.7), 0 0 30px rgba(89,229,255,0.03) inset;
+  color: var(--text-sheen);
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  align-items: flex-end;
+  z-index: 40;
+  transform-origin: top right;
+  animation: gentleFloat 6s ease-in-out infinite;
+}
+
+.time {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  color: var(--accent-cyan);
+  text-shadow: 0 6px 20px rgba(89,229,255,0.06);
+}
+
+.day {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+@keyframes gentleFloat {
+  0% { transform: translateY(0) }
+  50% { transform: translateY(-6px) }
+  100% { transform: translateY(0) }
+}
+
+@media (max-width: 880px) {
+  .clock { right: 20px; top: 18px; min-width: 140px; padding: 0.45rem 0.8rem }
+  .time { font-size: 1rem }
+}
