@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import styles from "./EducationSection.module.css";
 import SectionHeading from "./SectionHeading";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 const educationData = [
   { degree: "B.Tech. (CSM)", institution: "Aditya Institute of Technology and Management, Tekkali", year: "2023 – 2027", grade: "8.4 (CGPA)" },
@@ -11,12 +11,12 @@ const educationData = [
   { degree: "SSC", institution: "Infant Jesus High School, Tekkali", year: "2021", grade: "100%" },
 ];
 
-const listVariants = {
+const listVariants: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.16, delayChildren: 0.12 } }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, x: -18 },
   visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 140, damping: 18 } }
 };
