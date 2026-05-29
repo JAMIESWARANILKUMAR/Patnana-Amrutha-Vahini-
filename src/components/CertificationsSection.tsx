@@ -6,7 +6,8 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 const certData = [
   { title: "Generative AI for Educators", issuer: "Google (with MIT RAISE)", link: "", date: "2025", color: "cyan" },
-  { title: "The Joy of Computing Using Python", issuer: "NPTEL (IIT Madras)", link: "", date: "2024", color: "purple" },
+  { title: "Programming in Java", issuer: "NPTEL (IIT Kharagpur)", link: "https://drive.google.com/file/d/1eBttut8127VeKtjBSf0trIF66yWj9Dom/view?usp=drivesdk", date: "2025", color: "cyan" },
+  { title: "The Joy of Computing Using Python", issuer: "NPTEL (IIT Madras)", link: "https://drive.google.com/file/d/1jK0zKDWkUjQ3X2sngYskzHqWn24eM8he/view?usp=drivesdk", date: "2024", color: "purple" },
 ];
 
 const SpotlightCard = ({ cert }: { cert: any }) => {

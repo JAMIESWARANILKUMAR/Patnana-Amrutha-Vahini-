@@ -102,10 +102,7 @@ export default function AboutSection() {
                   <i className="fa-solid fa-laptop-code"></i>
                   <span>Web: HTML, CSS, JavaScript; front-end development.</span>
                 </motion.li>
-                <motion.li variants={textVariants}>
-                  <i className="fa-solid fa-database"></i>
-                  <span>Database: MongoDB. OS: Windows.</span>
-                </motion.li>
+                {/* Database and OS removed as requested */}
               </motion.ul>
             </motion.div>
           </div>
