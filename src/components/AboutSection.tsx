@@ -60,7 +60,7 @@ export default function AboutSection() {
             >
               <motion.div style={{ y: imageY, width: "100%", height: "120%", position: "absolute", top: "-10%" }}>
                 <Image 
-                  src="/amrutha.jpeg" 
+                  src="/Amrutha.jpeg" 
                   alt="Portrait of Patnana Amrutavahini" 
                   fill
                   className={styles.image}
