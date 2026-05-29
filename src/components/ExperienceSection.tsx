@@ -12,6 +12,12 @@ const experienceData = [
     details: "Completed a virtual internship focused on front-end web development. Designed responsive webpages, improved UI layouts and followed best practices for clean code and deadlines.",
     date: "Aug 2024 - Sep 2024"
   },
+  {
+    title: "ServiceNow Internship Training Program",
+    subtitle: "SmartBridge in association with ADITYA INSTITUTE OF TECHNOLOGY AND MANAGEMENT",
+    details: "Completed a ServiceNow internship training program where I gained hands-on experience in platform configuration, workflow automation, forms, and client scripts. Improved technical knowledge and problem-solving skills through practical learning and projects.",
+    date: "Training Program"
+  },
 ];
 
 export default function ExperienceSection() {
