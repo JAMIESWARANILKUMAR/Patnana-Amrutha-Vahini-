@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./AboutSection.module.css";
 import { useEffect, useRef } from "react";
 import SectionHeading from "./SectionHeading";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -44,6 +44,25 @@ export default function AboutSection() {
 
   const imageY = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
+  // 3D interaction motion values for the portrait card
+  const mvX = useMotionValue(0);
+  const mvY = useMotionValue(0);
+  const rotateX = useSpring(useTransform(mvY, [-0.5, 0.5], [18, -18]), { stiffness: 220, damping: 30 });
+  const rotateY = useSpring(useTransform(mvX, [-0.5, 0.5], [-18, 18]), { stiffness: 220, damping: 30 });
+
+  const handlePointerMove = (e: React.PointerEvent) => {
+    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    mvX.set(x);
+    mvY.set(y);
+  };
+
+  const handlePointerLeave = () => {
+    mvX.set(0);
+    mvY.set(0);
+  };
+
   return (
     <section className={styles.about} id="about" ref={sectionRef}>
       <div className={styles.container}>
@@ -55,10 +74,16 @@ export default function AboutSection() {
               className={styles.imageMask}
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-120px" }}
+              transition={{ duration: 0.9, ease: "easeOut" }}
+              onPointerMove={handlePointerMove}
+              onPointerLeave={handlePointerLeave}
+              style={{ rotateX, rotateY, transformStyle: "preserve-3d" as any }}
             >
-              <motion.div style={{ y: imageY, width: "100%", height: "120%", position: "absolute", top: "-10%" }}>
+              <motion.div 
+                className={styles.imageInner}
+                style={{ y: imageY }}
+              >
                 <Image 
                   src="/Amrutha.jpeg" 
                   alt="Portrait of Patnana Amrutavahini" 
@@ -68,10 +93,22 @@ export default function AboutSection() {
                   priority
                 />
               </motion.div>
-              <div className={styles.imageOverlay} />
-            </motion.div>
 
-            {/* Floating badges removed per request */}
+              <div className={styles.imageOverlay} />
+
+              {/* Floating premium badges */}
+              <motion.div className={styles.badgeContainer} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+                <motion.div className={styles.floatingBadge} variants={badgeVariants} whileHover={{ scale: 1.04 }}>
+                  <div className={styles.badgeIcon}><i className="fa-solid fa-robot"></i></div>
+                  <div className={styles.badgeText}><strong>AI · ML</strong><span>Modeling & CV</span></div>
+                </motion.div>
+
+                <motion.div className={`${styles.floatingBadge} ${styles.badgeSecondary}`} variants={badgeVariants} whileHover={{ scale: 1.04 }}>
+                  <div className={styles.badgeIcon}><i className="fa-solid fa-atom"></i></div>
+                  <div className={styles.badgeText}><strong>Open to Work</strong><span>Internships & Projects</span></div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
           </div>
 
           {/* Right Column: Editorial Typography */}

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import CustomCursor from "@/components/CustomCursor";
-import TranslateBar from "@/components/TranslateBar";
 
 export const metadata: Metadata = {
   title: "Patnana Amrutavahini | Portfolio",
@@ -37,7 +36,6 @@ export default function RootLayout({
       </head>
       <body>
         <CustomCursor />
-        <TranslateBar />
         <Navigation />
         {children}
       </body>
