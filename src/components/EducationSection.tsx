@@ -6,9 +6,9 @@ import SectionHeading from "./SectionHeading";
 import { motion, type Variants } from "framer-motion";
 
 const educationData = [
-  { degree: "B.Tech. (CSM)", institution: "Aditya Institute of Technology and Management, Tekkali", year: "2023 – 2027", grade: "8.4 (CGPA)" },
+  { degree: "B.Tech. (CSM)", institution: "Aditya Institute of Technology and Management, Tekkali", year: "2023 – 2027", grade: "8.44 (CGPA)" },
   { degree: "Intermediate (MPC)", institution: "Sri Chaitanya Jr College, Palasa", year: "2022 – 2023", grade: "85.1%" },
-  { degree: "SSC", institution: "Infant Jesus High School, Tekkali", year: "2021", grade: "100%" },
+  { degree: "SSC", institution: "Infant Jesus High School, Tekkali", year: "2021", grade: "97.34%" },
 ];
 
 const listVariants: Variants = {
