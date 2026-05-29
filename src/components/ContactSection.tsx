@@ -10,23 +10,46 @@ export default function ContactSection() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !email) {
       setStatus("Please fill in the required fields.");
       return;
     }
-    const whatsappNumber = "918985020650";
-    const whatsappText = `Hi Patnana, I'm ${name} (${email}). ${message ? `Project details: ${message}` : ""}`;
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`;
-    
-    setStatus("Opening WhatsApp...");
-    window.open(whatsappUrl, "_blank");
-    setName("");
-    setEmail("");
-    setMessage("");
-    setTimeout(() => setStatus(""), 4000);
+    setIsSubmitting(true);
+    setStatus("Sending message...");
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message })
+      });
+
+      const json = await res.json().catch(() => ({}));
+
+      if (res.ok) {
+        setStatus('Message sent — thank you!');
+        setName(''); setEmail(''); setMessage('');
+      } else {
+        // fallback: open whatsapp if backend not configured or fails
+        setStatus(json?.error ? `Error: ${json.error}` : 'Failed to send via server — opening WhatsApp as fallback.');
+        const whatsappNumber = '918985020650';
+        const whatsappText = `Hi Patnana, I'm ${name} (${email}). ${message ? `Project details: ${message}` : ""}`;
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`;
+        window.open(whatsappUrl, '_blank');
+      }
+    } catch (err: any) {
+      setStatus('Network error — opening WhatsApp as fallback.');
+      const whatsappNumber = '918985020650';
+      const whatsappText = `Hi Patnana, I'm ${name} (${email}). ${message ? `Project details: ${message}` : ""}`;
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`;
+      window.open(whatsappUrl, '_blank');
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setStatus(''), 5000);
+    }
   };
 
   return (
