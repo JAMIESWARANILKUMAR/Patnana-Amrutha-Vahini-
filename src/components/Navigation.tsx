@@ -48,7 +48,7 @@ export default function Navigation() {
       >
         <div className={styles.dock}>
           <div className={styles.logo} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-            JEAK
+            PA
           </div>
           
           <nav className={styles.desktopNav}>

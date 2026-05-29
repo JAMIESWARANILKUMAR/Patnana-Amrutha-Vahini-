@@ -24,10 +24,8 @@ const HoverLetter = ({ letter, variants }: { letter: string; variants: any }) =>
 
 // Word-level wrapper that forces each word into its own premium font
 const nameWords: { text: string; font: string; cls: string }[] = [
-  { text: "JAMI",  font: "'Unbounded', sans-serif",        cls: "wordJami"  },
-  { text: "ESWAR", font: "'Syne', sans-serif",              cls: "wordEswar" },
-  { text: "ANIL",  font: "'Plus Jakarta Sans', sans-serif", cls: "wordAnil"  },
-  { text: "KUMAR", font: "'Outfit', sans-serif",            cls: "wordKumar" },
+  { text: "PATNANA",        font: "'Unbounded', sans-serif",        cls: "wordPrimary" },
+  { text: "AMRUTAVAHINI",  font: "'Syne', sans-serif",              cls: "wordSecondary" },
 ];
 
 export default function HeroSection() {
@@ -83,7 +81,7 @@ export default function HeroSection() {
     return () => clearInterval(interval);
   }, []);
 
-  const name = "JAMI ESWAR ANIL KUMAR";
+  const name = "PATNANA AMRUTAVAHINI";
   const nameArray = name.split("");
 
   const containerVariants = {
@@ -151,7 +149,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          Entrepreneur • Founder • Human Resources
+          AI & ML Enthusiast • Front-end Developer
         </motion.p>
         
         <div className={styles.nameGlow}>
@@ -193,7 +191,7 @@ export default function HeroSection() {
           initial="hidden"
           animate="visible"
         >
-          AI · Human Resources · Data Analytics · Marketing · Business Consultant
+          Motivated AI & ML student building practical ML projects and responsive web apps.
         </motion.p>
         
         <motion.p 
@@ -202,7 +200,7 @@ export default function HeroSection() {
           initial="hidden"
           animate="visible"
         >
-          Building human-centered organizations by marrying HR intelligence with AI-driven growth, marketing, and advisory services.
+          Passionate about applying machine learning to real-world problems and building user-friendly front-end experiences.
         </motion.p>
         
         <motion.div 
@@ -225,7 +223,7 @@ export default function HeroSection() {
             className={styles.outlineBtn} 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="mailto:jamianil37@gmail.com"
+            href="mailto:amruthapatnana217@gmail.com"
           >
             Get in touch
           </motion.a>

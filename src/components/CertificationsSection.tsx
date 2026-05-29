@@ -5,13 +5,8 @@ import SectionHeading from "./SectionHeading";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 const certData = [
-  { title: "Excel Dashboarding in Business Analytics", issuer: "Simplilearn", link: "https://simpli.app.link/UFt6kQ7avQb", date: "2026", color: "cyan" },
-  { title: "Human Resources Information Professional", issuer: "HRCP & SHRM", link: "https://www.linkedin.com/learning/certificates/888d8ab9042d09f4d6cfdc5ac61c64d8845ea7827a7c80928d23aed4e0394a6b", date: "2026", color: "purple" },
-  { title: "Introduction to IoT", issuer: "Simplilearn", link: "https://simpli.app.link/bGRqsyCavQb", date: "2025", color: "cyan" },
-  { title: "LinkedIn Marketing Fundamentals", issuer: "LinkedIn", link: "http://verify.skilljar.com/c/j3mdejy4ewu3", date: "2025", color: "purple" },
-  { title: "Explore Core Data Concepts", issuer: "Microsoft", link: "https://learn.microsoft.com/en-us/certifications/", date: "2024", color: "cyan" },
-  { title: "Entrepreneurship Foundation", issuer: "NASBA", link: "https://www.linkedin.com/learning/certificates/edcb69b64bc16a41137192d0fbb748f323ed7775880498aac34ae311d1201740", date: "2024", color: "purple" },
-  { title: "Consultant Job Simulation", issuer: "Forage", link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/xhih9yFWsf6AYfngd/KJGjQRHZ6eGquTKfF_xhih9yFWsf6AYfngd_WdB5QKKLQWXZeXNrx_1750329003746_completion_certificate.pdf", date: "2024", color: "cyan" },
+  { title: "Generative AI for Educators", issuer: "Google (with MIT RAISE)", link: "", date: "2025", color: "cyan" },
+  { title: "The Joy of Computing Using Python", issuer: "NPTEL (IIT Madras)", link: "", date: "2024", color: "purple" },
 ];
 
 const SpotlightCard = ({ cert }: { cert: any }) => {

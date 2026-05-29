@@ -16,6 +16,7 @@
 # next.js
 /.next/
 /out/
+legacy_backup/
 
 # production
 /build

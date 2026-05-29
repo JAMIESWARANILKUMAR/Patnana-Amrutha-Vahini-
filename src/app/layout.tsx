@@ -5,10 +5,10 @@ import CustomCursor from "@/components/CustomCursor";
 import TranslateBar from "@/components/TranslateBar";
 
 export const metadata: Metadata = {
-  title: "Jami Eswar Anil Kumar | Entrepreneur Portfolio",
-  description: "Building human-centered organizations by marrying HR intelligence with AI-driven growth.",
-  icons: {
-    icon: "/Profile.webp"
+  title: "Patnana Amrutavahini | Portfolio",
+  description: "AI & ML enthusiast — projects in computer vision, FastAPI and front-end development.",
+    icons: {
+    icon: "/amrutha.jpeg"
   }
 };
 
@@ -30,8 +30,10 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
         />
-        <link rel="icon" href="/Profile.webp" type="image/webp" />
-        <link rel="shortcut icon" href="/Profile.webp" />
+        <link rel="icon" href="/amrutha.jpeg" type="image/jpeg" />
+        <link rel="shortcut icon" href="/amrutha.jpeg" />
+        <link rel="apple-touch-icon" href="/amrutha.jpeg" />
+        <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body>
         <CustomCursor />

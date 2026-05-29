@@ -7,34 +7,10 @@ import { useRef } from "react";
 
 const experienceData = [
   {
-    title: "Entrepreneur & Founder",
-    subtitle: "Vyntyra Consultancy Services",
-    details: "Spearheaded strategic planning, business development, and innovative technology implementation to optimize operations and secure partnerships.",
-    date: "Sep 2024 - Present"
-  },
-  {
-    title: "Google Campus Ambassador",
-    subtitle: "Google Gemini",
-    details: "Representing Google Gemini as an on-site intern in Srikakulam, Andhra Pradesh.",
-    date: "May 2026 - Present"
-  },
-  {
-    title: "Professional Instructor",
-    subtitle: "Udemy",
-    details: "Serving as a Professional Instructor and participating in the Instructor Rookery apprenticeship.",
-    date: "May 2025 - Present"
-  },
-  {
-    title: "Student Partner",
-    subtitle: "Internshala",
-    details: "Engaged in multiple concurrent Internshala Student Partner programs.",
-    date: "Jul 2025 - Present"
-  },
-  {
-    title: "LinkedIn Ads Manager",
-    subtitle: "LinkedIn (Freelance)",
-    details: "Developed and managed impactful LinkedIn marketing ads, significantly increasing CTR and conversions.",
-    date: "Jan 2025 - Jun 2025"
+    title: "Web Development Intern",
+    subtitle: "CodSoft",
+    details: "Completed a virtual internship focused on front-end web development. Designed responsive webpages, improved UI layouts and followed best practices for clean code and deadlines.",
+    date: "Aug 2024 - Sep 2024"
   },
 ];
 

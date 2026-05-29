@@ -7,19 +7,24 @@ import { ReactNode } from "react";
 
 const skillsData = [
   {
-    category: "Human Resources (HR) Skills",
-    skills: ["Talent Acquisition", "Candidate Experience", "Emotional Intelligence", "HRIS", "Strategy", "L&D"],
-    badges: ["Culture Design", "Talent Signals", "Employee Experience"],
+    category: "Programming Languages",
+    skills: ["C++", "Java", "Python"],
+    badges: ["Algorithmic Thinking", "OOP", "Scripting"],
   },
   {
-    category: "Business Intelligence",
-    skills: ["Excel Proficiency", "Data Visualization", "Data Modeling", "Data Connectivity"],
-    badges: ["Insights", "Storytelling", "Dashboards"],
+    category: "Web Development",
+    skills: ["HTML", "CSS", "JavaScript"],
+    badges: ["Responsive UI", "Accessibility", "Frontend"],
   },
   {
-    category: "Marketing Skills",
-    skills: ["Project Management", "CRM", "Analytics", "Email Marketing", "Brand Management", "Strategy"],
-    badges: ["LinkedIn", "Content", "Campaigns"],
+    category: "Data & Tools",
+    skills: ["MongoDB", "Computer Vision (Python)", "FastAPI"],
+    badges: ["Modeling", "APIs", "Deployment"],
+  },
+  {
+    category: "Operating Systems",
+    skills: ["Windows"],
+    badges: ["Desktop Dev"],
   },
 ];
 
@@ -66,7 +71,7 @@ const HolographicCard = ({ children }: { children: ReactNode }) => {
 };
 
 export default function SkillsSection() {
-  const marqueeText = "AI · HUMAN RESOURCES · DATA ANALYTICS · MARKETING · BUSINESS CONSULTANT · ";
+  const marqueeText = "AI · ML · Web Development · Computer Vision · FastAPI · MongoDB · ";
 
   return (
     <section className={styles.skills} id="skills">

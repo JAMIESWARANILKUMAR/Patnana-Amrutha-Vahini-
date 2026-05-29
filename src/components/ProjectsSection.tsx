@@ -6,19 +6,14 @@ import { motion } from "framer-motion";
 
 const projectsData = [
   {
-    title: "Accenture Nordics Job Simulation",
-    description: "AI-enabled HR consulting sprint with inclusive marketing narratives.",
-    tags: ["AI", "HR Analytics"],
+    title: "AI4Agro - AI-Based Smart Agriculture System",
+    description: "Image-classification based system for crop disease detection, treatment recommendations, yield estimation and growth tracking. Built with Python, computer vision and a FastAPI backend.",
+    tags: ["Python", "Computer Vision", "FastAPI"],
   },
   {
-    title: "Human-First Consultancy Sprint",
-    description: "People analytics rollout for founders balancing empathy and efficiency.",
-    tags: ["Consultancy", "Culture"],
-  },
-  {
-    title: "Employer Brand Campaigns",
-    description: "Scaled LinkedIn content strategy and ad suites for APAC clients.",
-    tags: ["Marketing", "LinkedIn"],
+    title: "Online Banking System",
+    description: "Secure web application with user authentication, account management and transaction features. Front-end implemented with HTML, CSS and JavaScript and backed by a database.",
+    tags: ["Web", "HTML", "JavaScript"],
   },
 ];
 
@@ -47,7 +42,7 @@ export default function ProjectsSection() {
   return (
     <section className={styles.projects} id="projects">
       <div className={styles.container}>
-        <SectionHeading title="Projects" subtitle="Accenture Nordics Job Simulation & more." />
+        <SectionHeading title="Projects" subtitle="Personal and academic projects." />
         
         <motion.div 
           className={styles.carousel}

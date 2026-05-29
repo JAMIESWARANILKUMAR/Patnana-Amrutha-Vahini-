@@ -60,8 +60,8 @@ export default function AboutSection() {
             >
               <motion.div style={{ y: imageY, width: "100%", height: "120%", position: "absolute", top: "-10%" }}>
                 <Image 
-                  src="/Profile.webp" 
-                  alt="Portrait of Jami Eswar Anil Kumar" 
+                  src="/amrutha.jpeg" 
+                  alt="Portrait of Patnana Amrutavahini" 
                   fill
                   className={styles.image}
                   sizes="(max-width: 960px) 100vw, 50vw"
@@ -71,35 +71,12 @@ export default function AboutSection() {
               <div className={styles.imageOverlay} />
             </motion.div>
 
-            {/* Floating Badges */}
-            <motion.div 
-              className={styles.badgeContainer}
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <motion.div className={styles.floatingBadge} variants={badgeVariants} whileHover={{ scale: 1.05 }}>
-                <span className={styles.badgeIcon}>🏆</span>
-                <div className={styles.badgeText}>
-                  <strong>Google Campus Ambassador '26</strong>
-                  <span>Leading dev communities</span>
-                </div>
-              </motion.div>
-              
-              <motion.div className={`${styles.floatingBadge} ${styles.badgeSecondary}`} variants={badgeVariants} whileHover={{ scale: 1.05 }}>
-                <span className={styles.badgeIcon}>✨</span>
-                <div className={styles.badgeText}>
-                  <strong>TieVizag Invitee</strong>
-                  <span>Entrepreneurial excellence</span>
-                </div>
-              </motion.div>
-            </motion.div>
+            {/* Floating badges removed per request */}
           </div>
 
           {/* Right Column: Editorial Typography */}
           <div className={styles.textColumn}>
-            <SectionHeading title="About Me" subtitle="Merging human-centered focus with AI and data." />
+            <SectionHeading title="About Me" subtitle="Motivated AI & ML enthusiast with practical web skills." />
             
             <motion.div 
               className={styles.content}
@@ -109,25 +86,25 @@ export default function AboutSection() {
               viewport={{ once: true, margin: "-100px" }}
             >
               <motion.h3 className={styles.headline} variants={textVariants}>
-                Founder & Director of <span className={styles.highlight}>Vyntyra Consultancy Services</span>
+                Patnana Amrutavahini
               </motion.h3>
               
               <motion.p className={styles.paragraph} variants={textVariants}>
-                Currently pursuing my B.Tech in Computer Science and Engineering (AI & ML) at the Aditya Institute of Technology and Management (2024–2028), I bridge the gap between advanced technical solutions and human-centric organizational growth.
+                Motivated AI & ML enthusiast with strong analytical and problem-solving skills. Passionate about applying machine learning to real-world problems and continuously improving technical expertise through hands-on projects. Also skilled in front-end web development for creating responsive and user-friendly web applications.
               </motion.p>
               
               <motion.ul className={styles.list} variants={containerVariants}>
                 <motion.li variants={textVariants}>
-                  <i className="fa-solid fa-chalkboard-user"></i> 
-                  <span>Leading Vyntyra Academy to conduct technical workshops and mentorship across India.</span>
+                  <i className="fa-solid fa-code"></i>
+                  <span>Programming: C++, Java, Python.</span>
                 </motion.li>
                 <motion.li variants={textVariants}>
-                  <i className="fa-solid fa-microchip"></i> 
-                  <span>Specialized in AI/ML applications, Power BI, prompt engineering, and data analytics.</span>
+                  <i className="fa-solid fa-laptop-code"></i>
+                  <span>Web: HTML, CSS, JavaScript; front-end development.</span>
                 </motion.li>
                 <motion.li variants={textVariants}>
-                  <i className="fa-solid fa-users-gear"></i> 
-                  <span>Architecting equitable cultures and future-ready growth frameworks for modern businesses.</span>
+                  <i className="fa-solid fa-database"></i>
+                  <span>Database: MongoDB. OS: Windows.</span>
                 </motion.li>
               </motion.ul>
             </motion.div>

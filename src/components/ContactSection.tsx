@@ -17,8 +17,8 @@ export default function ContactSection() {
       setStatus("Please fill in the required fields.");
       return;
     }
-    const whatsappNumber = "916301588867";
-    const whatsappText = `Hi Jami, I'm ${name} (${email}). ${message ? `Project details: ${message}` : ""}`;
+    const whatsappNumber = "918985020650";
+    const whatsappText = `Hi Patnana, I'm ${name} (${email}). ${message ? `Project details: ${message}` : ""}`;
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`;
     
     setStatus("Opening WhatsApp...");
@@ -42,9 +42,12 @@ export default function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3>Future-ready teams start here</h3>
-            <p>
-              I help founders and Human Resources leaders blend empathy, data, and AI so you can design people programs that scale.
+            <div className={styles.headerRow}>
+              <h3>Get in touch</h3>
+              <span className={styles.opportunity}><strong>Looking for opportunities</strong></span>
+            </div>
+            <p className={styles.lead}>
+              I'm available for internships, project collaborations, and front-end or ML tasks. Reach out to discuss opportunities.
             </p>
             
             <div className={styles.stats}>
@@ -52,28 +55,24 @@ export default function ContactSection() {
                 <strong>24h</strong>
                 <span>Response</span>
               </div>
-              <div>
-                <strong>30</strong>
-                <span>Students guided</span>
-              </div>
-              <div>
-                <strong>4</strong>
-                <span>Active partnerships</span>
-              </div>
             </div>
 
             <ul className={styles.metaList}>
               <li>
                 <i className="fa-solid fa-envelope"></i>
-                <a href="mailto:jamianil37@gmail.com">jamianil37@gmail.com</a>
+                <a href="mailto:amruthapatnana217@gmail.com">amruthapatnana217@gmail.com</a>
               </li>
               <li>
                 <i className="fa-solid fa-phone"></i>
-                <a href="tel:+916301588867">+91 63015 88867</a>
+                <a href="tel:+918985020650">+91-8985020650</a>
               </li>
               <li>
                 <i className="fa-solid fa-briefcase"></i>
-                <span>Based in Srikakulam · Remote friendly</span>
+                <span>Based in Tekkali, Srikakulam · Open to opportunities</span>
+              </li>
+              <li>
+                <i className="fa-brands fa-linkedin"></i>
+                <a href="https://linkedin.com/in/patnana-amrutavahini-664bab30b" target="_blank" rel="noreferrer">LinkedIn</a>
               </li>
             </ul>
           </motion.article>

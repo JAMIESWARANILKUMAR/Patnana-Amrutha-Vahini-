@@ -8,7 +8,15 @@ export default function Footer() {
       color: "var(--text-muted)",
       fontSize: "0.9rem"
     }}>
-      <p>Copyrights © 2025 Jami Eswar Anil Kumar - Crafted with Love by Vyntyra Consultancy Services</p>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '0.75rem', alignItems: 'center' }}>
+        <a href="https://linkedin.com/in/patnana-amrutavahini-664bab30b" target="_blank" rel="noreferrer" style={{ color: 'inherit' }} aria-label="LinkedIn">
+          <i className="fa-brands fa-linkedin" style={{ fontSize: '1.15rem' }} />
+        </a>
+        <a href="mailto:amruthapatnana217@gmail.com" style={{ color: 'inherit' }} aria-label="Email">
+          <i className="fa-solid fa-envelope" style={{ fontSize: '1.05rem' }} />
+        </a>
+      </div>
+      <p>Copyrights © 2026 Patnana Amrutavahini - Portfolio</p>
     </footer>
   );
 }

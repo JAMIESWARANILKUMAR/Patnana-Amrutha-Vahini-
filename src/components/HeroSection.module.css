@@ -120,11 +120,12 @@
 
 .title {
   font-family: 'Unbounded', sans-serif;
-  font-size: clamp(1.8rem, 3.8vw, 3.8rem);
+  /* Reduced maximum size for a more moderate presence */
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
   font-weight: 900;
-  line-height: 1.15;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.04em;
+  line-height: 1.12;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   position: relative;
 }
