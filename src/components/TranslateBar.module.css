@@ -1,0 +1,124 @@
+.bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  height: 42px;
+  background: rgba(6, 8, 16, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(89, 229, 255, 0.12);
+  display: flex;
+  align-items: center;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.label i {
+  font-size: 0.85rem;
+}
+
+.langList {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  flex: 1;
+}
+
+.langList::-webkit-scrollbar {
+  display: none;
+}
+
+.langBtn {
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background: transparent;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  font-family: 'Noto Sans', system-ui, sans-serif;
+}
+
+.langBtn:hover {
+  color: #fff;
+  background: rgba(89, 229, 255, 0.08);
+  border-color: rgba(89, 229, 255, 0.25);
+}
+
+.langBtn.active {
+  color: var(--accent-cyan);
+  background: rgba(89, 229, 255, 0.12);
+  border-color: rgba(89, 229, 255, 0.4);
+  box-shadow: 0 0 10px rgba(89, 229, 255, 0.15);
+}
+
+.resetBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 100, 100, 0.3);
+  background: rgba(255, 60, 60, 0.08);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 140, 140, 0.9);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.resetBtn:hover {
+  background: rgba(255, 60, 60, 0.16);
+  border-color: rgba(255, 100, 100, 0.5);
+  color: #fff;
+}
+
+/* Mobile: hide text labels, show icon only */
+@media (max-width: 480px) {
+  .label span {
+    display: none;
+  }
+
+  .inner {
+    padding: 0 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .langBtn {
+    font-size: 0.72rem;
+    padding: 0.15rem 0.45rem;
+  }
+}
