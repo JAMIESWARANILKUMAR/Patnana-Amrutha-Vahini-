@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Patnana Amrutavahini | Portfolio",
   description: "AI & ML enthusiast — projects in computer vision, FastAPI and front-end development.",
   icons: {
-    icon: "/Amrutha.jpeg"
+    icon: "/favicon.ico"
   }
 };
 
@@ -31,8 +31,8 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
         />
-        <link rel="icon" href="/Amrutha.jpeg" type="image/jpeg" />
-        <link rel="shortcut icon" href="/Amrutha.jpeg" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/Amrutha.jpeg" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
